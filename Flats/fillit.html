@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamflats</title>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@500&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" rel="stylesheet">
+    <link href="CSS/style2.css" rel="stylesheet">
+</head>
+<body>
+    <div class="wrapper">
+        <nav>
+            <div class="collage">
+                <img src="images/img1.jpg">
+                <img src="images/img2.jpg">
+                <img src="images/img3.jpg">
+                <img src="images/img4.jpg">
+                <img src="images/img5.jpg">
+                <img src="images/img6.jpeg">
+                <img src="images/img7.jpg">
+                <img src="images/img8.jpg">
+                <img src="images/img9.jpg">
+                <img src="images/img10.jpg">
+                <img src="images/img11.jpg">
+                <img src="images/img12.jpg">
+            </div>
+        </nav>
+        <figure>
+           <h1><i class="fa-solid fa-house"></i></h1>
+        </figure>
+        <section>
+            <header>
+                <h1>Welcome! First things first...</h1>
+                <p>Before you can request, let's create an account for you</p>
+            </header>   
+            <form action="https://e3vwdl4bpd.execute-api.us-west-2.amazonaws.com/default/API2SES" method="POST">
+                <fieldset>
+                    <div class="line">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" name="email" required>
+                     </div>
+                    <div class="line">
+                        <label for="name">What's your name?</label>
+                        <div>
+                        <input type="fname" id="fname" name="name" placeholder="first name" required>
+                        <input type="lname" id="lname" name="name" placeholder="last name" required>
+                        </div>
+                    </div>
+                    <div class="line">
+                        <label for="phone">What's your phone number?</label>
+                        <input type="tel" id="phone" name="phone" placeholder="with area codes" optional>
+                    </div>
+                    <div class="line2">
+                        <label for="password">Create a safe password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div class="radio">
+                        <label>
+                            <input type="radio" name="agree" value="terms">I agree to the <a class="bold" href="https://policies.google.com/privacy?hl=en-US">Privacy Policy</a> and <a class="bold" href="http://www.google.com/intl/en_ZZ/policies/terms/archive/20070416/">Terms and Conditions</a> of Dreamflats. 
+                        </label>
+                        <label>
+                            <input type="radio" name="agree" value="updates"> I agree to receiving updates about relevants content, products, services and new features from Dreamflats via email. I can revoke this consent formlessly at any time, without giving any reason.
+                        </label>
+                    </div>
+                </fieldset>
+                <button>continue</button>
+            </form>
+        </section>
+        <aside>
+            <img src="images/imga.jpg" class="img-responsive">
+            <div class="text">
+                <h1>High-quality apartments</h1>
+                <p>Verified apartments that suit the Dreamflats-standard</p>
+                <h1>No additional costs</h1>
+                <p>All-inclusive rent including furniture, electricity, internet, etc</p>
+                <h1>Reliable support</h1>
+                <p>Legally verified rental agreements and necessary legal documents(such as blablablablabla)provided</p>
+            </div>    
+        </aside>
+    </div>    
+</body>
+</html>
