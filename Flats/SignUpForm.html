@@ -57,12 +57,14 @@
                         <input type="password" id="password" name="password" required>
                     </div>
                     <div class="radio">
-                        <label>
-                            <input type="radio" name="agree" value="terms">I agree to the <a class="bold" href="https://policies.google.com/privacy?hl=en-US">Privacy Policy</a> and <a class="bold" href="http://www.google.com/intl/en_ZZ/policies/terms/archive/20070416/">Terms and Conditions</a> of Dreamflats. 
-                        </label>
-                        <label>
-                            <input type="radio" name="agree" value="updates"> I agree to receiving updates about relevants content, products, services and new features from Dreamflats via email. I can revoke this consent formlessly at any time, without giving any reason.
-                        </label>
+                        <p>
+                            <input type="radio" name="agree" id="terms">
+                            <label for="terms">I agree to the <a class="bold" href="https://policies.google.com/privacy?hl=en-US">Privacy Policy</a> and <a class="bold" href="http://www.google.com/intl/en_ZZ/policies/terms/archive/20070416/">Terms and Conditions</a> of Dreamflats.</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="agree" id="updates">
+                            <label for="updates"> I agree to receiving updates about relevants content, products, services and new features from Dreamflats via email. I can revoke this consent formlessly at any time, without giving any reason.</label>
+                        </p>
                     </div>
                 </fieldset>
                 <button>continue</button>
