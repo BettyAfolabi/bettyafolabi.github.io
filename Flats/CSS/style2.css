@@ -39,16 +39,19 @@ img{
 }
 header{
     margin: 2rem 0 8rem 0;
+    word-wrap: break-word;
 }
 header p{
     padding-left: 0;
-    opacity: 0.8;
-    font-size: 0.9rem;
-    display: block;
+    line-height: 21px;
+    font-size: 14px;
+    font-weight: 500;
 }
 h1{
-    font-size: 1.5rem;
-    margin-bottom: 0;
+    font-size: 24px;
+    line-height: 22.5px;
+    font-weight: 600;
+    margin-bottom: 5px;
 }
 a{
     text-decoration: none;
@@ -60,10 +63,17 @@ a:hover{
 }
 fieldset{
     border: none;
+    max-width: 690px;
 }
 [for="name"],[for="phone"],[for="password"],[for="email"]{
     display: flex;
     flex-flow: row wrap;
+}
+.namebox{
+    display: grid;
+    grid-gap: 25px;
+    grid-template-rows: auto;
+    grid-template-columns: 1fr 1fr;
 }
 .line{
     border-bottom:1px solid grey ;
@@ -78,18 +88,41 @@ input:not([type="radio"]){
 input:focus{
     outline: none;
 }
-[type="radio"]{
-    position: absolute;
-    left: 10px;
+.radio{
+    display: block;
 }
-[type="radio"]:label{
+.radio p{
+    display: inline-flex;
+    flex-direction: row;
+    position: relative;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 15px 0;
+}
+[type="radio"]{
     position: relative;
     cursor: pointer;
-    display: inline-block;
-    line-height: 1.5;
+    margin-right: 10px;
+    min-width: 30px;
+    padding: 0;
+    min-height: 30px;
+}
+[type="radio"]:label{
+    padding-left: 20px;
+    line-height: 1.1rem;
 }
 .line label{
     align-items: center;
+}
+#SignUpFooter{
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    z-index: 5;
+    margin-top: 2.5rem;
 }
 @media only screen and (max-width:600px){
     aside{
@@ -116,10 +149,11 @@ input:focus{
     button{
         background-color: rgb(8, 161, 8);
         color: white;
-        padding: 10px 25px;
+        padding: 1rem;
         border: none;
-        font-size: 1rem;
-        width: 80%;
+        font-size: 1.2rem;
+        width: 100%;
+        display: inline-block;
         border-radius: 20px;
         margin: 2rem 0 1rem 0;
         transition-duration: 0.4s;
@@ -185,33 +219,51 @@ input:focus{
     }
     aside{
         position: relative;
+        overflow: auto;
+        max-width: 420px;
+        min-width: 300px;
+        background-color: #f7f9fa;
+        border-left: 1px solid #e5e9ed;
         padding: 0;
         margin: 0;
-        height: 100%;
-        flex-basis:30% ;
+        flex-basis:30%;
+    }
+    .styleaside{
+        position: relative;
+        min-height: 100%;
+        display: flex;
+        overflow: hidden;
     }
     aside img{
-        width: 100%;
-        height: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        height: 75%;
     }
     .img-responsive{
-        background-size: cover;
+        width: 100%;
+        margin: 0;
     }
     aside h1{
-        font-size: 20px;
+        font-size: 16px;
         font-weight: bold
     }
     aside p{
-        font-size: 15px;
+        color: #575d64;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        line-height: 21px;
         padding-bottom: 1.5rem;
     }
-    .text{
-        position: absolute;
-        bottom: 20px;
-        right: 20px;
-        color: black;
-        padding-left: 20px;
-        padding-right: 20px;
+   .text{
+        position: relative;
+        display: block;
+        z-index: 10;
+        align-self: flex-end;
+        padding-left: 15px;
+        padding-right: 30px;
         animation: text 2s linear -1s reverse;
     }
     .text h1, p{
@@ -223,16 +275,14 @@ input:focus{
         to{bottom: 100px;}
     }
     button{
-        position: absolute;
-        right: 2rem;
         background-color: rgb(8, 161, 8);
-        color: white;
-        padding: 10px 25px;
+        padding: 1rem;
         border: none;
         font-size: 1rem;
+        width: 11rem;
         display: inline-block;
-        border-radius: 20px;
-        margin: 2rem 0 1rem 0;
+        border-radius: 30px;
+        margin-bottom: 5px;
         transition-duration: 0.4s;
     }
     button a{
