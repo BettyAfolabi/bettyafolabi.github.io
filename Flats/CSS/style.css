@@ -95,6 +95,7 @@ input{
     border: none;
     border-radius: 5px;
     width: 100%;
+    line-height: 45px;
 }
 ::placeholder{
     font-size: 23px;
@@ -220,7 +221,7 @@ a:hover{
         left: 0;
         right: 0;
         top: 0;
-        height: 75%;
+        height: 80%;
     }
     .img-responsive{
         width: 100%;
@@ -250,6 +251,16 @@ a:hover{
     .text h1, p{
         margin: 0;
         padding: 0 1rem 0 1rem;
+    }
+    aside ::after{
+        background: linear-gradient(0deg,#f7f9fa,#f7f9fa00),linear-gradient(0deg,#f7f9fa,#f7f9fa00);
+        bottom: 0;
+        content: "";
+        left: 0;
+        position: absolute;
+        right: 0;
+        top: -100px;
+        z-index: -1;
     }
     @keyframes text {
         from{bottom:0px;}
